@@ -38,6 +38,9 @@ Example training directory setup is provided in the `flowers` folder.
 You'll notice that the each folder maps to a category index (1, 10, 100, 101, etc.)
 You'll also need to supply a json file that maps the category index to category names. An example is provided as `cat_to_name.json`
 
-##License
+## Known Issues
+- As you'll see in the jupyter notebook, the first training pass works well, but after saving and reloading the model, the second training pass doesn't train the network at all. I think this is because I didn't save and reload the optimizer `state_dict` used for training. It maybe fixable by saving and reloading the optimizer `state_dict`, but I'm no longer working on this project.
+
+## License
 
 [GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/)
